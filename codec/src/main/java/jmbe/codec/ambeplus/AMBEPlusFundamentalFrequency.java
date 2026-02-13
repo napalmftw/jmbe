@@ -153,8 +153,8 @@ public enum AMBEPlusFundamentalFrequency implements IFundamentalFrequency
     W123(0, 9, FrameType.ERASURE),
     W124(Math.PI / 32.0, 14, FrameType.SILENCE),
     W125(Math.PI / 32.0, 14, FrameType.SILENCE),
-    W126(0, 9, FrameType.TONE),
-    W127(0, 9, FrameType.TONE);
+    W126(0, 9, FrameType.SILENCE),
+    W127(0, 9, FrameType.SILENCE);
 
     private float mFrequency;
     private int mL;
