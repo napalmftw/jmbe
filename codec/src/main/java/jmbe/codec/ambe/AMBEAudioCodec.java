@@ -41,12 +41,19 @@ public class AMBEAudioCodec implements IAudioCodec
     }
 
     /**
-     * Converts the AMBE frame data into PCM audio samples at 8kHz 16-bit rate.
-     *
-     * @param frameData byte array of AMBE frame data
+    * Converts the AMBE frame into PCM audio samples at 8kHz 16-bit rate
      */
-    public float[] getAudio(byte[] frameData)
+    public float[] getAudio(AMBEFrame ambeFrame)
     {
+        // ADDED: Mute the loud dispatch alert tones
+        if (ambeFrame.getFrameType() == jmbe.codec.FrameType.TONE)
+        {
+            return new float[160];
+        }
+
+        return mSynthesizer.getAudio(ambeFrame);
+    }
+
         return getAudio(new AMBEFrame(frameData));
     }
 
