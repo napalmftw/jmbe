@@ -1,12 +1,15 @@
-Copyright (C) 2015-2020 Dennis Sheirer
+# This is my fork of the jmbe library to remove AMBE tone generation for a very specific use case.
+
+**If you want IMBE tones removed just drop me a line.**
+
+Original work is Copyright (C) 2015-2020 Dennis Sheirer
+
+Original README.md follows:
+
 
 # jmbe - Java Multi-Band Excitation library
 
 Audio conversion library for decoding MBE encoded audio frames.
-
-
------> Java AMBE/IMBE audio decoder minus tone generation <-----
-
   
 Decodes IMBE 144-bit and AMBE 72-bit encoded 20 millisecond audio frames to 8 kHz 16-bit mono PCM encoded audio.
 
